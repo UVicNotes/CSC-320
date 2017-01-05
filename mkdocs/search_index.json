@@ -29,6 +29,16 @@
             "location": "/#assessment", 
             "text": "Task  Weight      Assignments  5%    Project  10%    Midterm  35%    Final  50%", 
             "title": "Assessment"
+        }, 
+        {
+            "location": "/Introduction/", 
+            "text": "Introduction\n\n\nLecture 1 - January 5, 2017\n\n\nWhat \nproblems\n are \nsolvable\n by a \ncomputer\n?\n\n\nTo answer this question we need to define these terms.\n\n\nWe will examine three computational models,\n\n\n\n\nComplexity Theory\n\n\nComputability Theory\n\n\nAutomata Theory", 
+            "title": "Introduction"
+        }, 
+        {
+            "location": "/Introduction/#introduction", 
+            "text": "Lecture 1 - January 5, 2017  What  problems  are  solvable  by a  computer ?  To answer this question we need to define these terms.  We will examine three computational models,   Complexity Theory  Computability Theory  Automata Theory", 
+            "title": "Introduction"
         }
     ]
 }
