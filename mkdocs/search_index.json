@@ -1,0 +1,34 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "CSC 320\n\n\nConnex\n\n\n\n\nInstructor\n: Bruce Kapron\n\n\nOffice\n: ECS 620\n\n\nEmail\n: \nbmkapron@cs.uvic.ca\n\n\nOffice Hours\n: TBA\n\n\n\n\nOverview\n\n\nThe goal of this course is to study the fundamental power and limitations of computation. We will use abstract models to gain an understanding of what can and cannot be achieved using computational devices. We will study the Turing machine, a model that captures everything that can be computed in principle, and formally show the existence of problems that cannot be solved by this model. We also examine restricted versions of Turing machines, such as finite automata, context-free grammars, and time- and space- bounded machines, which are often useful in practice and have structure which will allow use to give deep characterizations enabling us to understand their power. We will define what it means to show that one problem is harder to solve than another, and use this idea both to prove that some problems are hard to solve and also to develop generic techniques for solving large classes of problems. In particular, we will look at the Satisfiability problem, which will provide us with a general method for solving many kinds of optimization problems, and which is also a key component of the problem at the heart of modern computer science -- P vs NP.\n\n\nTextbook\n\n\nTBA\n\n\nAssessment\n\n\n\n\n\n\n\n\nTask\n\n\nWeight\n\n\n\n\n\n\n\n\n\n\nAssignments\n\n\n5%\n\n\n\n\n\n\nProject\n\n\n10%\n\n\n\n\n\n\nMidterm\n\n\n35%\n\n\n\n\n\n\nFinal\n\n\n50%", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#csc-320", 
+            "text": "", 
+            "title": "CSC 320"
+        }, 
+        {
+            "location": "/#connex", 
+            "text": "Instructor : Bruce Kapron  Office : ECS 620  Email :  bmkapron@cs.uvic.ca  Office Hours : TBA", 
+            "title": "Connex"
+        }, 
+        {
+            "location": "/#overview", 
+            "text": "The goal of this course is to study the fundamental power and limitations of computation. We will use abstract models to gain an understanding of what can and cannot be achieved using computational devices. We will study the Turing machine, a model that captures everything that can be computed in principle, and formally show the existence of problems that cannot be solved by this model. We also examine restricted versions of Turing machines, such as finite automata, context-free grammars, and time- and space- bounded machines, which are often useful in practice and have structure which will allow use to give deep characterizations enabling us to understand their power. We will define what it means to show that one problem is harder to solve than another, and use this idea both to prove that some problems are hard to solve and also to develop generic techniques for solving large classes of problems. In particular, we will look at the Satisfiability problem, which will provide us with a general method for solving many kinds of optimization problems, and which is also a key component of the problem at the heart of modern computer science -- P vs NP.", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/#textbook", 
+            "text": "TBA", 
+            "title": "Textbook"
+        }, 
+        {
+            "location": "/#assessment", 
+            "text": "Task  Weight      Assignments  5%    Project  10%    Midterm  35%    Final  50%", 
+            "title": "Assessment"
+        }
+    ]
+}
