@@ -3,4 +3,5 @@ before_script: bash ./init.sh
 script: bash ./deploy.sh
 env:
   global:
-    - GH_REF: github.com/UVicNotes/CSC-320.git
+  - GH_REF: github.com/UVicNotes/CSC-320.git
+  - secure: Un1ZppEwx7OkJHOP3UCS7SJ/kGBNTTsaap1uXjCW9lLOwNiqTGoJ14xwhGFon1Y23aXxmhorM4q0028/DlqQQqLoVBqN/Ql60Vt3mW30Fw72P5qMOeyP2PP1tjXZqgHu22VkpNX3Z0kRj2ELpRvcq1d60xbr8WCmg+wp2yQPh/PLB4qo9zN+ycquKAs4ZYeGNNUi0VmnT+CK2+9L23vQ5V3T9xlOlXFdS989m7xcPneqODn0w1SItJdtNyNDSxg878e0YXtm9vMKyixsuUKmpsADrezFd5XfaMkoWBRfeWcakxx0Swh+L6KCN4n32sbh9hetemrs3eYZoeDgoMMR+Lk8p7oDT12i+sZMDPpI/OzuXERs1bDETAptTN15x5lVAtGZanjbNoXzIWtYUeh36AsagYHJq5eRYDol1BeO/Qc+TAlO/B37LzPqH4OwEMxkZA2UkAcbvduxzm2CnQjFo0C5NP5l/9jktaLR5nWh8pC/2/fDNwSw+GUbt1phvt5S0UVBi8qQOFca/TthBwRioeZRWys/QGcfOIjmcIzniqLQGiHgs+fm8hb7TcZAW8LLW2wwV8LWyea3VIJYcqOFYW9Hp7qh7oq42UYJg3HrhJCqu6xMKYbU3N2Odnui4K0/hWkBanxRC+2xn4i14xUAfpqz9/OSIphbjVq6J2rlDvk=
