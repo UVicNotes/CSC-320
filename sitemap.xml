@@ -11,7 +11,15 @@
 
     
     <url>
-     <loc>http://uvicnotes.github.io/CSC-320//Introduction/</loc>
+     <loc>http://uvicnotes.github.io/CSC-320//0-Introduction/</loc>
+     <lastmod>2017-01-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>http://uvicnotes.github.io/CSC-320//1-Alphabets-and-Languages/</loc>
      <lastmod>2017-01-05</lastmod>
      <changefreq>daily</changefreq>
     </url>

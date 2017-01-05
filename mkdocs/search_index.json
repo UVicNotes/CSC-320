@@ -31,14 +31,54 @@
             "title": "Assessment"
         }, 
         {
-            "location": "/Introduction/", 
+            "location": "/0-Introduction/", 
             "text": "Introduction\n\n\nLecture 1 - January 5, 2017\n\n\nWhat \nproblems\n are \nsolvable\n by a \ncomputer\n?\n\n\nTo answer this question we need to define these terms.\n\n\nWe will examine three computational models,\n\n\n\n\nComplexity Theory\n\n\nComputability Theory\n\n\nAutomata Theory", 
+            "title": "0 Introduction"
+        }, 
+        {
+            "location": "/0-Introduction/#introduction", 
+            "text": "Lecture 1 - January 5, 2017  What  problems  are  solvable  by a  computer ?  To answer this question we need to define these terms.  We will examine three computational models,   Complexity Theory  Computability Theory  Automata Theory", 
             "title": "Introduction"
         }, 
         {
-            "location": "/Introduction/#introduction", 
-            "text": "Lecture 1 - January 5, 2017  What  problems  are  solvable  by a  computer ?  To answer this question we need to define these terms.  We will examine three computational models,   Complexity Theory  Computability Theory  Automata Theory", 
-            "title": "Introduction"
+            "location": "/1-Alphabets-and-Languages/", 
+            "text": "Alphabets and Languages\n\n\nLecture 1 - January 5, 2017\n\n\nStrings and Symbols\n\n\ndefinitions\n:\n\n\n\n\nAn \nalphabet\n is a finite set of set of symbols, we denote an arbitrary alphabet $\\Sigma$.\n\n\nA \nstring\n is a finite sequence of symbols from the alphabet.\n\n\nThe \nempty string\n is the string with no symbols denoted $\\epsilon$.\n\n\n\n\nOperations and Relations on Strings\n\n\nConcatenation\n\n\nGiven two strings $x$ and $y$ the \nconcatenation\n of $x$ and $y$ denoted $xy$ is the the two string combined end-to-end.\n\n\nConcatenation is associative, so $xyz = (xy)z = x(yz)$.\n\n\nWe let $x^n$ be $x$ concatenated with itself $n$ times.\n\n\nSubstrings\n\n\nA string $v$ is a \nsubstring\n of $w$ if and only if there exist strings $x$ and $y$ such that\n\n\n\n\n\n    W = xvy,\n\n\n\n\n\nIf $x = \\epsilon$ then $v$ is a \nprefix\n of $w$, if $y = \\epsilon$ then $v$ is a \nsuffix\n of $w$.\n\n\nReversal\n\n\nGive a string $w$, the \nreversal\n of $w$ is denoted $w^R$.\n\n\nLanguages\n\n\ndefinition\n: A \nlanguage\n is a set of strings over an alphabet. We can apply set opertations like,\n\n\n\n\nUnion\n\n\nIntersection\n\n\nSet Difference.\n\n\n\n\nGiven a language $A$, the \ncomplement\n of $A$, denoted $\\bar A$, is\n\n\n\n\n\n    \\bar A = \\Sigma - A.", 
+            "title": "1 Alphabets and Languages"
+        }, 
+        {
+            "location": "/1-Alphabets-and-Languages/#alphabets-and-languages", 
+            "text": "Lecture 1 - January 5, 2017", 
+            "title": "Alphabets and Languages"
+        }, 
+        {
+            "location": "/1-Alphabets-and-Languages/#strings-and-symbols", 
+            "text": "definitions :   An  alphabet  is a finite set of set of symbols, we denote an arbitrary alphabet $\\Sigma$.  A  string  is a finite sequence of symbols from the alphabet.  The  empty string  is the string with no symbols denoted $\\epsilon$.", 
+            "title": "Strings and Symbols"
+        }, 
+        {
+            "location": "/1-Alphabets-and-Languages/#operations-and-relations-on-strings", 
+            "text": "", 
+            "title": "Operations and Relations on Strings"
+        }, 
+        {
+            "location": "/1-Alphabets-and-Languages/#concatenation", 
+            "text": "Given two strings $x$ and $y$ the  concatenation  of $x$ and $y$ denoted $xy$ is the the two string combined end-to-end.  Concatenation is associative, so $xyz = (xy)z = x(yz)$.  We let $x^n$ be $x$ concatenated with itself $n$ times.", 
+            "title": "Concatenation"
+        }, 
+        {
+            "location": "/1-Alphabets-and-Languages/#substrings", 
+            "text": "A string $v$ is a  substring  of $w$ if and only if there exist strings $x$ and $y$ such that   \n    W = xvy,   If $x = \\epsilon$ then $v$ is a  prefix  of $w$, if $y = \\epsilon$ then $v$ is a  suffix  of $w$.", 
+            "title": "Substrings"
+        }, 
+        {
+            "location": "/1-Alphabets-and-Languages/#reversal", 
+            "text": "Give a string $w$, the  reversal  of $w$ is denoted $w^R$.", 
+            "title": "Reversal"
+        }, 
+        {
+            "location": "/1-Alphabets-and-Languages/#languages", 
+            "text": "definition : A  language  is a set of strings over an alphabet. We can apply set opertations like,   Union  Intersection  Set Difference.   Given a language $A$, the  complement  of $A$, denoted $\\bar A$, is   \n    \\bar A = \\Sigma - A.", 
+            "title": "Languages"
         }
     ]
 }
