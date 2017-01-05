@@ -13,7 +13,7 @@ theme: 'material'
 extra:
   logo: 'images/UVicNotes-Logo.svg'
   palette:
-    primary: 'grey'
+    primary: 'cyan'
     accent: 'orange'
   font:
     text: 'Source Sans Pro'
