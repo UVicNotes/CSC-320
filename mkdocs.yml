@@ -1,0 +1,12 @@
+site_name: CSC 320
+docs_dir: Notes
+site_url: http://uvicnotes.github.io/CSC-320/
+repo_url: https://github.com/UVicNotes/CSC-320
+site_description: Course Notes for CSC 320 - Foundations of Computer Science
+site_author: Brynn Hawker
+extra_javascript:
+    - http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+    - https://cdn.rawgit.com/UVicNotes/UVicNotes/81099952ba789829fab1840e5d26cb5a2bf62011/helpers/mathjax.js
+markdown_extensions:
+    - mdx_math
+theme: readthedocs
