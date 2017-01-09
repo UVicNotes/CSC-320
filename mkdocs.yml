@@ -12,7 +12,7 @@ markdown_extensions:
     - mdx_math
 extra:
   palette:
-    primary: 'cyan'
+    primary: 'blue'
     accent: 'orange'
   author:
     github: 'UVicNotes'
