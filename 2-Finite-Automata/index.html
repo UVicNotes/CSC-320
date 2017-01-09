@@ -9,47 +9,45 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>CSC 320 - Course Notes for CSC 320 - Foundations of Computer Science</title>
+        <title>2 Finite Automata - CSC 320</title>
       
       
-        <meta name="description" content="Course Notes for CSC 320 - Foundations of Computer Science">
       
-      
-        <link rel="canonical" href="http://uvicnotes.github.io/CSC-320/">
+        <link rel="canonical" href="http://uvicnotes.github.io/CSC-320/2-Finite-Automata/">
       
       
         <meta name="author" content="Brynn Hawker">
       
     
-    <meta property="og:url" content="http://uvicnotes.github.io/CSC-320/">
+    <meta property="og:url" content="http://uvicnotes.github.io/CSC-320/2-Finite-Automata/">
     <meta property="og:title" content="CSC 320">
-    <meta property="og:image" content="http://uvicnotes.github.io/CSC-320//./">
+    <meta property="og:image" content="http://uvicnotes.github.io/CSC-320/2-Finite-Automata//../">
     <meta name="apple-mobile-web-app-title" content="CSC 320">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     
     
-    <link rel="shortcut icon" type="image/x-icon" href="./assets/images/favicon.ico">
-    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
     <style>
       @font-face {
       	font-family: 'Icon';
-      	src: url('./assets/fonts/icon.eot?52m981');
-      	src: url('./assets/fonts/icon.eot?#iefix52m981')
+      	src: url('../assets/fonts/icon.eot?52m981');
+      	src: url('../assets/fonts/icon.eot?#iefix52m981')
                format('embedded-opentype'),
-      		   url('./assets/fonts/icon.woff?52m981')
+      		   url('../assets/fonts/icon.woff?52m981')
                format('woff'),
-      		   url('./assets/fonts/icon.ttf?52m981')
+      		   url('../assets/fonts/icon.ttf?52m981')
                format('truetype'),
-      		   url('./assets/fonts/icon.svg?52m981#icon')
+      		   url('../assets/fonts/icon.svg?52m981#icon')
                format('svg');
       	font-weight: normal;
       	font-style: normal;
       }
     </style>
-    <link rel="stylesheet" href="./assets/stylesheets/application.css">
+    <link rel="stylesheet" href="../assets/stylesheets/application.css">
     
-      <link rel="stylesheet" href="./assets/stylesheets/palettes.css">
+      <link rel="stylesheet" href="../assets/stylesheets/palettes.css">
     
     
       
@@ -66,7 +64,7 @@
       </style>
     
     
-    <script src="./assets/javascripts/modernizr.js"></script>
+    <script src="../assets/javascripts/modernizr.js"></script>
     
   </head>
   
@@ -98,7 +96,7 @@
             
           </span>
         
-        CSC 320
+        2 Finite Automata
       </div>
     </div>
     
@@ -172,8 +170,35 @@
           
             
   <li>
-    <a class="current" title="Home" href=".">
+    <a class="" title="Home" href="..">
       Home
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="0 Introduction" href="../0-Introduction/">
+      0 Introduction
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="1 Alphabets and Languages" href="../1-Alphabets-and-Languages/">
+      1 Alphabets and Languages
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="current" title="2 Finite Automata" href="./">
+      2 Finite Automata
     </a>
     
       
@@ -183,58 +208,25 @@
         <ul>
           
             <li class="anchor">
-              <a title="Connex" href="#connex">
-                Connex
+              <a title="Example" href="#example">
+                Example
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Overview" href="#overview">
-                Overview
+              <a title="A Finite Automaton" href="#a-finite-automaton">
+                A Finite Automaton
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Textbook" href="#textbook">
-                Textbook
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="Assessment" href="#assessment">
-                Assessment
+              <a title="Closure" href="#closure">
+                Closure
               </a>
             </li>
           
         </ul>
       
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="0 Introduction" href="0-Introduction/">
-      0 Introduction
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="1 Alphabets and Languages" href="1-Alphabets-and-Languages/">
-      1 Alphabets and Languages
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="2 Finite Automata" href="2-Finite-Automata/">
-      2 Finite Automata
-    </a>
     
   </li>
 
@@ -263,45 +255,47 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="csc-320">CSC 320</h1>
-<h2 id="connex"><a href="https://connex.csc.uvic.ca/portal/site/413c6402-9f22-4008-9941-030ec31baf7d/">Connex</a></h2>
+          <h1 id="finite-automata">Finite Automata</h1>
+<p><strong>Lecture 2 - January 9, 2017</strong></p>
+<p>We use <strong>finite automata</strong> to model systems with a fixed number of states.</p>
+<h4 id="example">Example</h4>
+<p>A door controller is a finite automata. Suppose it has three components:</p>
 <ul>
-<li><strong>Instructor</strong>: Bruce Kapron</li>
-<li><strong>Office</strong>: ECS 620</li>
-<li><strong>Email</strong>: <a href="mailto:bmkapron@cs.uvic.ca">bmkapron@cs.uvic.ca</a></li>
-<li><strong>Office Hours</strong>: TBA</li>
+<li>Front Pad</li>
+<li>Door</li>
+<li>Rear Pad.</li>
 </ul>
-<h2 id="overview">Overview</h2>
-<p>The goal of this course is to study the fundamental power and limitations of computation. We will use abstract models to gain an understanding of what can and cannot be achieved using computational devices. We will study the Turing machine, a model that captures everything that can be computed in principle, and formally show the existence of problems that cannot be solved by this model. We also examine restricted versions of Turing machines, such as finite automata, context-free grammars, and time- and space- bounded machines, which are often useful in practice and have structure which will allow use to give deep characterizations enabling us to understand their power. We will define what it means to show that one problem is harder to solve than another, and use this idea both to prove that some problems are hard to solve and also to develop generic techniques for solving large classes of problems. In particular, we will look at the Satisfiability problem, which will provide us with a general method for solving many kinds of optimization problems, and which is also a key component of the problem at the heart of modern computer science -- P vs NP.</p>
-<h2 id="textbook">Textbook</h2>
-<p>TBA</p>
-<h2 id="assessment">Assessment</h2>
-<table>
-<thead>
-<tr>
-<th>Task</th>
-<th align="center">Weight</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Assignments</td>
-<td align="center">5%</td>
-</tr>
-<tr>
-<td>Project</td>
-<td align="center">10%</td>
-</tr>
-<tr>
-<td>Midterm</td>
-<td align="center">35%</td>
-</tr>
-<tr>
-<td>Final</td>
-<td align="center">50%</td>
-</tr>
-</tbody>
-</table>
+<p>The door has two possible <strong>states</strong>, <code>OPEN</code> or <code>CLOSED</code>. There are four possible <strong>signals</strong> (or <strong>inputs</strong>):</p>
+<ul>
+<li><code>FRONT</code></li>
+<li><code>REAR</code></li>
+<li><code>BOTH</code></li>
+<li><code>NEITHER</code></li>
+</ul>
+<p>We can represent this with a state diagram.</p>
+<h2 id="a-finite-automaton">A Finite Automaton</h2>
+<p><em>definition</em>: A <strong>finite automaton (FA)</strong> is a structure, for a machine $M$, $M = (Q, \Sigma, \delta, q_0, F)$, where</p>
+<ul>
+<li>$Q = {q_1, q_2, \ldots}$ is a finite <strong>set of states</strong></li>
+<li>$\Sigma$ is the <strong>input symbols</strong> or alphabet</li>
+<li>$\delta$ is the <strong>transition function</strong></li>
+<li>$q_0 \in Q$ is the <strong>starting state</strong></li>
+<li>$F \subseteq Q$ is the set of <strong>accept states</strong> or <strong>final states</strong></li>
+</ul>
+<p>The language of the machine $M$ is the set $L$ of all strings $M$ accepts.</p>
+<h3 id="computation-or-acceptance">Computation or Acceptance</h3>
+<p><em>definition</em>: Given a finite automaton $M = (Q, \Sigma, \delta, q_0, F)$, a string $w$ over $\Sigma$ where $w = w_1 w_2 \ldots w_n$.</p>
+<p>Then $M$ <strong>accepts</strong> $w$ if there is a sequence of states $r_0,r_1,\ldots,r_n$ in $Q$ such that</p>
+<h4 id="example_1">Example</h4>
+<p><em>Construct a finite automaton accepting the following language:</em></p>
+<p>$$<script type="math/tex; mode=display">\begin{aligned}
+    \{ x \in \{a,b\}^* | \text{ $x$ contains a substring of 3 consecutive $a$'s} \}
+\end{aligned}</script>$$</p>
+<p>![Solution](img/2017-01-09 12-30-16.jpg)</p>
+<h2 id="closure">Closure</h2>
+<p><em>definition</em>: A set is <strong>closed</strong> under an operation if the result of the operation on an element of the set is also an element of the set.</p>
+<h3 id="theorem">Theorem</h3>
+<p>If $L_1$ and $L_2$ are regular languages then so is $L_1 \cup L_2$.</p>
           <aside class="copyright" role="note">
             
             Documentation built with
@@ -318,24 +312,24 @@
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-    </div>
-    <div class="next">
-      
-        <a href="0-Introduction/" title="0 Introduction">
+        <a href="../1-Alphabets-and-Languages/" title="1 Alphabets and Languages">
           <span class="direction">
-            Next
+            Previous
           </span>
           <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
             <div class="stretch">
               <div class="title">
-                0 Introduction
+                1 Alphabets and Languages
               </div>
-            </div>
-            <div class="button button-next" role="button" aria-label="Next">
-              <i class="icon icon-forward"></i>
             </div>
           </div>
         </a>
+      
+    </div>
+    <div class="next">
       
     </div>
   </nav>
@@ -354,10 +348,10 @@
       </div>
     </main>
     <script>
-      var base_url = '.';
+      var base_url = '..';
       var repo_id  = 'UVicNotes/CSC-320';
     </script>
-    <script src="./assets/javascripts/application.js"></script>
+    <script src="../assets/javascripts/application.js"></script>
     
       <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
