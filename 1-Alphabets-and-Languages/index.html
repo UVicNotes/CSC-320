@@ -210,6 +210,12 @@
               </a>
             </li>
           
+            <li class="anchor">
+              <a title="Problems" href="#problems">
+                Problems
+              </a>
+            </li>
+          
         </ul>
       
     
@@ -265,6 +271,7 @@
 <h4 id="reversal">Reversal</h4>
 <p>Give a string $w$, the <strong>reversal</strong> of $w$ is denoted $w^R$.</p>
 <h2 id="languages">Languages</h2>
+<p><strong>Lecture 2 - January 9, 2017</strong></p>
 <p><em>definition</em>: A <strong>language</strong> is a set of strings over an alphabet. We can apply set opertations like,</p>
 <ul>
 <li>Union</li>
@@ -277,6 +284,32 @@
     \bar A = \Sigma - A.
 </script>
 </p>
+<p>Given languages $L_1$ and $L_2$ over $\Sigma$, their <strong>concatenation</strong> is,</p>
+<p>
+<script type="math/tex; mode=display">\begin{aligned}
+    L = L_1 \cdot L_2 = \{w \in \Sigma^* : w = xy; x \in L_1, y \in L_2 \}.
+\end{aligned}</script>
+</p>
+<p>Sometime we denote $L_1 \cdot L_2$ as $L_1 L_2$.</p>
+<h3 id="kleene-star">Kleene star</h3>
+<p><em>definition</em>: The <strong>Kleene star</strong> of a language $L$, denoted $L^*$ is the set of all strings obtained by concatenating more or more strings from $L$, i.e.,</p>
+<p>
+<script type="math/tex; mode=display">\begin{aligned}
+    L^* = \{w \in \Sigma^* : w = w_1 w_2 \ldots w_k; k \ge 0, w_i \in L \}.
+\end{aligned}</script>
+</p>
+<p>For example, the star of $\Sigma$ is $\Sigma^*$, the star of $\varnothing$ is ${\epsilon}$.</p>
+<h2 id="problems">Problems</h2>
+<h3 id="decision-vs-search">Decision vs Search</h3>
+<ul>
+<li><strong>Decision</strong>: Given a formula $\varphi(x_1,x_2,\ldots)$ is there a setting of variables such that $\varphi = T$.</li>
+<li><strong>Search</strong>: Given $\varphi$, return a satisfying assignment if one exists.</li>
+</ul>
+<p>Some examples,</p>
+<ul>
+<li><em>Is a graph 3-colourable?</em> is a <strong>decision</strong> problem.</li>
+<li><em>What is a  3-colouring of this graph?</em> is a <strong>search</strong> problem.</li>
+</ul>
           <aside class="copyright" role="note">
             
             Documentation built with
