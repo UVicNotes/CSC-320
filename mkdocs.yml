@@ -1,5 +1,6 @@
 site_name: CSC 320
 docs_dir: Notes
+theme_dir: theme
 site_url: http://uvicnotes.github.io/CSC-320/
 repo_url: https://github.com/UVicNotes/CSC-320
 site_description: Course Notes for CSC 320 - Foundations of Computer Science
@@ -9,14 +10,9 @@ extra_javascript:
     - https://cdn.rawgit.com/UVicNotes/UVicNotes/81099952ba789829fab1840e5d26cb5a2bf62011/helpers/mathjax.js
 markdown_extensions:
     - mdx_math
-theme: 'material'
 extra:
-  logo: 'images/UVicNotes-Logo.svg'
   palette:
     primary: 'cyan'
     accent: 'orange'
-  font:
-    text: 'Source Sans Pro'
-    code: 'Source Code Pro'
   author:
     github: 'UVicNotes'

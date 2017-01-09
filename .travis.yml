@@ -1,5 +1,11 @@
 sudo: true
-before_script: bash ./init.sh
+language: node_js
+node_js:
+- '6'
+install:
+- sudo pip install mkdocs python-markdown-math
+- npm install -g bower gulp
+before_script: wget https://raw.githubusercontent.com/UVicNotes/UVicNotes/master/scripts/deploy.sh
 script: bash ./deploy.sh
 env:
   global:
