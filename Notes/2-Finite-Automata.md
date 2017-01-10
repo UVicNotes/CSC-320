@@ -47,7 +47,7 @@ $$\begin{aligned}
     \{ x \in \{a,b\}^* | \text{ $x$ contains a substring of 3 consecutive $a$'s} \}
 \end{aligned}$$
 
-![Solution](img/2017-01-09 12-30-16.jpg)
+![Solution](img/2017-01-09--12-30-16.jpg)
 
 ## Closure
 
