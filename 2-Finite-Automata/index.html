@@ -268,9 +268,9 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="finite-automata">Finite Automata</h1>
+          <h1 id="finite-automata">Finite Automata<a class="headerlink" href="#finite-automata" title="Permanent link">&para;</a></h1>
 <p>We use <strong>finite automata</strong> to model systems with a fixed number of states. We also call these <strong>deterministic finite automata (DFAs)</strong>.</p>
-<h4 id="example">Example</h4>
+<h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h4>
 <p>A door controller is a finite automata. Suppose it has three components:</p>
 <ul>
 <li>Front Pad</li>
@@ -285,7 +285,7 @@
 <li><code>NEITHER</code></li>
 </ul>
 <p>We can represent this with a state diagram.</p>
-<h2 id="a-finite-automaton">A Finite Automaton</h2>
+<h2 id="a-finite-automaton">A Finite Automaton<a class="headerlink" href="#a-finite-automaton" title="Permanent link">&para;</a></h2>
 <p><em>definition</em>: A <strong>finite automaton (FA)</strong> is a structure, for a machine $M$, $M = (Q, \Sigma, \delta, q_0, F)$, where</p>
 <ul>
 <li>$Q = {q_1, q_2, \ldots}$ is a finite <strong>set of states</strong></li>
@@ -295,18 +295,18 @@
 <li>$F \subseteq Q$ is the set of <strong>accept states</strong> or <strong>final states</strong></li>
 </ul>
 <p>The language of the machine $M$ is the set $L$ of all strings $M$ accepts.</p>
-<h3 id="computation-or-acceptance">Computation or Acceptance</h3>
+<h3 id="computation-or-acceptance">Computation or Acceptance<a class="headerlink" href="#computation-or-acceptance" title="Permanent link">&para;</a></h3>
 <p><em>definition</em>: Given a finite automaton $M = (Q, \Sigma, \delta, q_0, F)$, a string $w$ over $\Sigma$ where $w = w_1 w_2 \ldots w_n$.</p>
 <p>Then $M$ <strong>accepts</strong> $w$ if there is a sequence of states $r_0,r_1,\ldots,r_n$ in $Q$ such that</p>
-<h4 id="example_1">Example</h4>
+<h4 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h4>
 <p><em>Construct a finite automaton accepting the following language:</em>
 $$
-    { x \in {a,b}^* | \text{ $x$ contains a substring of 3 consecutive $a$'s} }
+    { x \in {a,b}^* | \text{ $x$ contains a substring of 3 consecutive $a$&rsquo;s} }
 $$</p>
 <p><img alt="Solution" src="../img/2017-01-09--12-30-16.jpg" /></p>
-<h2 id="closure">Closure</h2>
+<h2 id="closure">Closure<a class="headerlink" href="#closure" title="Permanent link">&para;</a></h2>
 <p><em>definition</em>: A set is <strong>closed</strong> under an operation if the result of the operation on an element of the set is also an element of the set.</p>
-<h3 id="theorem">Theorem</h3>
+<h3 id="theorem">Theorem<a class="headerlink" href="#theorem" title="Permanent link">&para;</a></h3>
 <p>If $L_1$ and $L_2$ are regular languages then so is $L_1 \cup L_2$.</p>
           <aside class="copyright" role="note">
             

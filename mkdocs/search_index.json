@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "CSC 320\n\n\nConnex\n\n\n\n\nInstructor\n: Bruce Kapron\n\n\nOffice\n: ECS 620\n\n\nEmail\n: \nbmkapron@cs.uvic.ca\n\n\nOffice Hours\n: TBA\n\n\n\n\nOverview\n\n\nThe goal of this course is to study the fundamental power and limitations of computation. We will use abstract models to gain an understanding of what can and cannot be achieved using computational devices. We will study the Turing machine, a model that captures everything that can be computed in principle, and formally show the existence of problems that cannot be solved by this model. We also examine restricted versions of Turing machines, such as finite automata, context-free grammars, and time- and space- bounded machines, which are often useful in practice and have structure which will allow use to give deep characterizations enabling us to understand their power. We will define what it means to show that one problem is harder to solve than another, and use this idea both to prove that some problems are hard to solve and also to develop generic techniques for solving large classes of problems. In particular, we will look at the Satisfiability problem, which will provide us with a general method for solving many kinds of optimization problems, and which is also a key component of the problem at the heart of modern computer science -- P vs NP.\n\n\nTextbook\n\n\nTBA\n\n\nAssessment\n\n\n\n\n\n\n\n\nTask\n\n\nWeight\n\n\n\n\n\n\n\n\n\n\nAssignments\n\n\n5%\n\n\n\n\n\n\nProject\n\n\n10%\n\n\n\n\n\n\nMidterm\n\n\n35%\n\n\n\n\n\n\nFinal\n\n\n50%", 
+            "text": "CSC 320\n\n\nConnex\n\n\n\n\nInstructor\n: Bruce Kapron\n\n\nOffice\n: ECS 620\n\n\nEmail\n: \nbmkapron@cs.uvic.ca\n\n\nOffice Hours\n: TBA\n\n\n\n\nOverview\n\n\nThe goal of this course is to study the fundamental power and limitations of computation. We will use abstract models to gain an understanding of what can and cannot be achieved using computational devices. We will study the Turing machine, a model that captures everything that can be computed in principle, and formally show the existence of problems that cannot be solved by this model. We also examine restricted versions of Turing machines, such as finite automata, context-free grammars, and time- and space- bounded machines, which are often useful in practice and have structure which will allow use to give deep characterizations enabling us to understand their power. We will define what it means to show that one problem is harder to solve than another, and use this idea both to prove that some problems are hard to solve and also to develop generic techniques for solving large classes of problems. In particular, we will look at the Satisfiability problem, which will provide us with a general method for solving many kinds of optimization problems, and which is also a key component of the problem at the heart of modern computer science \n P vs NP.\n\n\nTextbook\n\n\nTBA\n\n\nAssessment\n\n\n\n\n\n\n\n\nTask\n\n\nWeight\n\n\n\n\n\n\n\n\n\n\nAssignments\n\n\n5%\n\n\n\n\n\n\nProject\n\n\n10%\n\n\n\n\n\n\nMidterm\n\n\n35%\n\n\n\n\n\n\nFinal\n\n\n50%", 
             "title": "Home"
         }, 
         {
@@ -17,7 +17,7 @@
         }, 
         {
             "location": "/#overview", 
-            "text": "The goal of this course is to study the fundamental power and limitations of computation. We will use abstract models to gain an understanding of what can and cannot be achieved using computational devices. We will study the Turing machine, a model that captures everything that can be computed in principle, and formally show the existence of problems that cannot be solved by this model. We also examine restricted versions of Turing machines, such as finite automata, context-free grammars, and time- and space- bounded machines, which are often useful in practice and have structure which will allow use to give deep characterizations enabling us to understand their power. We will define what it means to show that one problem is harder to solve than another, and use this idea both to prove that some problems are hard to solve and also to develop generic techniques for solving large classes of problems. In particular, we will look at the Satisfiability problem, which will provide us with a general method for solving many kinds of optimization problems, and which is also a key component of the problem at the heart of modern computer science -- P vs NP.", 
+            "text": "The goal of this course is to study the fundamental power and limitations of computation. We will use abstract models to gain an understanding of what can and cannot be achieved using computational devices. We will study the Turing machine, a model that captures everything that can be computed in principle, and formally show the existence of problems that cannot be solved by this model. We also examine restricted versions of Turing machines, such as finite automata, context-free grammars, and time- and space- bounded machines, which are often useful in practice and have structure which will allow use to give deep characterizations enabling us to understand their power. We will define what it means to show that one problem is harder to solve than another, and use this idea both to prove that some problems are hard to solve and also to develop generic techniques for solving large classes of problems. In particular, we will look at the Satisfiability problem, which will provide us with a general method for solving many kinds of optimization problems, and which is also a key component of the problem at the heart of modern computer science   P vs NP.", 
             "title": "Overview"
         }, 
         {
@@ -97,7 +97,7 @@
         }, 
         {
             "location": "/2-Finite-Automata/", 
-            "text": "Finite Automata\n\n\nWe use \nfinite automata\n to model systems with a fixed number of states. We also call these \ndeterministic finite automata (DFAs)\n.\n\n\nExample\n\n\nA door controller is a finite automata. Suppose it has three components:\n\n\n\n\nFront Pad\n\n\nDoor\n\n\nRear Pad.\n\n\n\n\nThe door has two possible \nstates\n, \nOPEN\n or \nCLOSED\n. There are four possible \nsignals\n (or \ninputs\n):\n\n\n\n\nFRONT\n\n\nREAR\n\n\nBOTH\n\n\nNEITHER\n\n\n\n\nWe can represent this with a state diagram.\n\n\nA Finite Automaton\n\n\ndefinition\n: A \nfinite automaton (FA)\n is a structure, for a machine $M$, $M = (Q, \\Sigma, \\delta, q_0, F)$, where\n\n\n\n\n$Q = {q_1, q_2, \\ldots}$ is a finite \nset of states\n\n\n$\\Sigma$ is the \ninput symbols\n or alphabet\n\n\n$\\delta$ is the \ntransition function\n\n\n$q_0 \\in Q$ is the \nstarting state\n\n\n$F \\subseteq Q$ is the set of \naccept states\n or \nfinal states\n\n\n\n\nThe language of the machine $M$ is the set $L$ of all strings $M$ accepts.\n\n\nComputation or Acceptance\n\n\ndefinition\n: Given a finite automaton $M = (Q, \\Sigma, \\delta, q_0, F)$, a string $w$ over $\\Sigma$ where $w = w_1 w_2 \\ldots w_n$.\n\n\nThen $M$ \naccepts\n $w$ if there is a sequence of states $r_0,r_1,\\ldots,r_n$ in $Q$ such that\n\n\nExample\n\n\nConstruct a finite automaton accepting the following language:\n\n$$\n    { x \\in {a,b}^* | \\text{ $x$ contains a substring of 3 consecutive $a$'s} }\n$$\n\n\n\n\nClosure\n\n\ndefinition\n: A set is \nclosed\n under an operation if the result of the operation on an element of the set is also an element of the set.\n\n\nTheorem\n\n\nIf $L_1$ and $L_2$ are regular languages then so is $L_1 \\cup L_2$.", 
+            "text": "Finite Automata\n\n\nWe use \nfinite automata\n to model systems with a fixed number of states. We also call these \ndeterministic finite automata (DFAs)\n.\n\n\nExample\n\n\nA door controller is a finite automata. Suppose it has three components:\n\n\n\n\nFront Pad\n\n\nDoor\n\n\nRear Pad.\n\n\n\n\nThe door has two possible \nstates\n, \nOPEN\n or \nCLOSED\n. There are four possible \nsignals\n (or \ninputs\n):\n\n\n\n\nFRONT\n\n\nREAR\n\n\nBOTH\n\n\nNEITHER\n\n\n\n\nWe can represent this with a state diagram.\n\n\nA Finite Automaton\n\n\ndefinition\n: A \nfinite automaton (FA)\n is a structure, for a machine $M$, $M = (Q, \\Sigma, \\delta, q_0, F)$, where\n\n\n\n\n$Q = {q_1, q_2, \\ldots}$ is a finite \nset of states\n\n\n$\\Sigma$ is the \ninput symbols\n or alphabet\n\n\n$\\delta$ is the \ntransition function\n\n\n$q_0 \\in Q$ is the \nstarting state\n\n\n$F \\subseteq Q$ is the set of \naccept states\n or \nfinal states\n\n\n\n\nThe language of the machine $M$ is the set $L$ of all strings $M$ accepts.\n\n\nComputation or Acceptance\n\n\ndefinition\n: Given a finite automaton $M = (Q, \\Sigma, \\delta, q_0, F)$, a string $w$ over $\\Sigma$ where $w = w_1 w_2 \\ldots w_n$.\n\n\nThen $M$ \naccepts\n $w$ if there is a sequence of states $r_0,r_1,\\ldots,r_n$ in $Q$ such that\n\n\nExample\n\n\nConstruct a finite automaton accepting the following language:\n\n$$\n    { x \\in {a,b}^* | \\text{ $x$ contains a substring of 3 consecutive $a$\ns} }\n$$\n\n\n\n\nClosure\n\n\ndefinition\n: A set is \nclosed\n under an operation if the result of the operation on an element of the set is also an element of the set.\n\n\nTheorem\n\n\nIf $L_1$ and $L_2$ are regular languages then so is $L_1 \\cup L_2$.", 
             "title": "Finite Automata"
         }, 
         {
@@ -122,7 +122,7 @@
         }, 
         {
             "location": "/2-Finite-Automata/#example_1", 
-            "text": "Construct a finite automaton accepting the following language: \n$$\n    { x \\in {a,b}^* | \\text{ $x$ contains a substring of 3 consecutive $a$'s} }\n$$", 
+            "text": "Construct a finite automaton accepting the following language: \n$$\n    { x \\in {a,b}^* | \\text{ $x$ contains a substring of 3 consecutive $a$ s} }\n$$", 
             "title": "Example"
         }, 
         {
@@ -147,18 +147,38 @@
         }, 
         {
             "location": "/4-Regular-Expressions/", 
-            "text": "Regular Expressions\n\n\nWe can use regular operations to build up \nregular expressions\n which describe languages.\n\n\nFor example,\n\n\n\n\n\n  (a \\cup b)a^*\n\n\n\n\n\nis an $a$ or a $b$ followed by zero or more $a$'s.\n\n\nFormal Definition\n\n\nWe say $R$ is a \nregular expression\n if $R$ is\n\n\n\n\n$a$ for some $a$ in the alphabet $\\Sigma$,\n\n\n$\\varepsilon$,\n\n\n$\\varnothing$,\n\n\n$(R_1 \\cup R_2)$, where $R_1$ and $R_2$ are regular expressions,\n\n\n$(R_1 \\circ R_2)$, where $R_1$ and $R_2$ are regular expressions, or\n\n\n$(R)^*$, where $R$ is a regular expression.\n\n\n\n\nNote that $\\varepsilon$ is a language with only one string, the empty string ($\\epsilon$), and $\\varnothing$ is the language with no strings.", 
+            "text": "Regular Expressions\n\n\nWe can use regular operations to build up \nregular expressions\n which describe languages.\n\n\nFor example,\n\n\n\n\n\n  (a \\cup b)a^*\n\n\n\n\n\nis an $a$ or a $b$ followed by zero or more $a$\ns.\n\n\nFormal Definition\n\n\nWe say $R$ is a \nregular expression\n if $R$ is\n\n\n\n\n$a$ for some $a$ in the alphabet $\\Sigma$,\n\n\n$\\varepsilon$,\n\n\n$\\varnothing$,\n\n\n$(R_1 \\cup R_2)$, where $R_1$ and $R_2$ are regular expressions,\n\n\n$(R_1 \\circ R_2)$, where $R_1$ and $R_2$ are regular expressions, or\n\n\n$(R)^*$, where $R$ is a regular expression.\n\n\n\n\nNote that $\\varepsilon$ is a language with only one string, the empty string ($\\epsilon$), and $\\varnothing$ is the language with no strings.\n\n\nRegular Expressions and Languages\n\n\nTheorem\n\n\nA language is regular if and only if some regular expression describes it.\n\n\nProof\n\n\nBase\n: \n\n\n\n\n\n\n\n\n$R$\n\n\n$L(R)$\n\n\n$M$\n1\n\n\n\n\n\n\n\n\n\n\n$\\varnothing$\n\n\n$\\varnothing$\n\n\n\n\n\n\n\n\n$\\varepsilon$\n\n\n${\\varepsilon}$\n\n\n\n\n\n\n\n\n$a$\n\n\n${a}$\n\n\n\n\n\n\n\n\n\n\nNondeterminate Finite Automata to Regular Expressions\n\n\nGiven any nondeterminate finite automata we can construct an eqivalent nondeterminate finite automata with\n\n\n\n\nexactly one accept state,\n\n\nno arrows to the start state,\n\n\nno arrows out of the accept state, and\n\n\nthe accept state is not the start state.\n\n\n\n\n\n\n\n\n\n\n\n\n$L(R) = L(M)$", 
             "title": "Regular Expressions"
         }, 
         {
             "location": "/4-Regular-Expressions/#regular-expressions", 
-            "text": "We can use regular operations to build up  regular expressions  which describe languages.  For example,   \n  (a \\cup b)a^*   is an $a$ or a $b$ followed by zero or more $a$'s.", 
+            "text": "We can use regular operations to build up  regular expressions  which describe languages.  For example,   \n  (a \\cup b)a^*   is an $a$ or a $b$ followed by zero or more $a$ s.", 
             "title": "Regular Expressions"
         }, 
         {
             "location": "/4-Regular-Expressions/#formal-definition", 
             "text": "We say $R$ is a  regular expression  if $R$ is   $a$ for some $a$ in the alphabet $\\Sigma$,  $\\varepsilon$,  $\\varnothing$,  $(R_1 \\cup R_2)$, where $R_1$ and $R_2$ are regular expressions,  $(R_1 \\circ R_2)$, where $R_1$ and $R_2$ are regular expressions, or  $(R)^*$, where $R$ is a regular expression.   Note that $\\varepsilon$ is a language with only one string, the empty string ($\\epsilon$), and $\\varnothing$ is the language with no strings.", 
             "title": "Formal Definition"
+        }, 
+        {
+            "location": "/4-Regular-Expressions/#regular-expressions-and-languages", 
+            "text": "", 
+            "title": "Regular Expressions and Languages"
+        }, 
+        {
+            "location": "/4-Regular-Expressions/#theorem", 
+            "text": "A language is regular if and only if some regular expression describes it.", 
+            "title": "Theorem"
+        }, 
+        {
+            "location": "/4-Regular-Expressions/#proof", 
+            "text": "Base :      $R$  $L(R)$  $M$ 1      $\\varnothing$  $\\varnothing$     $\\varepsilon$  ${\\varepsilon}$     $a$  ${a}$", 
+            "title": "Proof"
+        }, 
+        {
+            "location": "/4-Regular-Expressions/#nondeterminate-finite-automata-to-regular-expressions", 
+            "text": "Given any nondeterminate finite automata we can construct an eqivalent nondeterminate finite automata with   exactly one accept state,  no arrows to the start state,  no arrows out of the accept state, and  the accept state is not the start state.       $L(R) = L(M)$", 
+            "title": "Nondeterminate Finite Automata to Regular Expressions"
         }
     ]
 }

@@ -229,6 +229,18 @@
               </a>
             </li>
           
+            <li class="anchor">
+              <a title="Regular Expressions and Languages" href="#regular-expressions-and-languages">
+                Regular Expressions and Languages
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Nondeterminate Finite Automata to Regular Expressions" href="#nondeterminate-finite-automata-to-regular-expressions">
+                Nondeterminate Finite Automata to Regular Expressions
+              </a>
+            </li>
+          
         </ul>
       
     
@@ -256,7 +268,7 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="regular-expressions">Regular Expressions</h1>
+          <h1 id="regular-expressions">Regular Expressions<a class="headerlink" href="#regular-expressions" title="Permanent link">&para;</a></h1>
 <p>We can use regular operations to build up <strong>regular expressions</strong> which describe languages.</p>
 <p>For example,</p>
 <p>
@@ -264,8 +276,8 @@
   (a \cup b)a^*
 </script>
 </p>
-<p>is an $a$ or a $b$ followed by zero or more $a$'s.</p>
-<h2 id="formal-definition">Formal Definition</h2>
+<p>is an $a$ or a $b$ followed by zero or more $a$&rsquo;s.</p>
+<h2 id="formal-definition">Formal Definition<a class="headerlink" href="#formal-definition" title="Permanent link">&para;</a></h2>
 <p>We say $R$ is a <strong>regular expression</strong> if $R$ is</p>
 <ol>
 <li>$a$ for some $a$ in the alphabet $\Sigma$,</li>
@@ -276,6 +288,53 @@
 <li>$(R)^*$, where $R$ is a regular expression.</li>
 </ol>
 <p>Note that $\varepsilon$ is a language with only one string, the empty string ($\epsilon$), and $\varnothing$ is the language with no strings.</p>
+<h2 id="regular-expressions-and-languages">Regular Expressions and Languages<a class="headerlink" href="#regular-expressions-and-languages" title="Permanent link">&para;</a></h2>
+<h3 id="theorem">Theorem<a class="headerlink" href="#theorem" title="Permanent link">&para;</a></h3>
+<p>A language is regular if and only if some regular expression describes it.</p>
+<h4 id="proof">Proof<a class="headerlink" href="#proof" title="Permanent link">&para;</a></h4>
+<p><strong>Base</strong>: </p>
+<table>
+<thead>
+<tr>
+<th align="center">$R$</th>
+<th align="center">$L(R)$</th>
+<th align="center">$M$<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">$\varnothing$</td>
+<td align="center">$\varnothing$</td>
+<td align="center"><img alt="" src="" /></td>
+</tr>
+<tr>
+<td align="center">$\varepsilon$</td>
+<td align="center">${\varepsilon}$</td>
+<td align="center"><img alt="" src="" /></td>
+</tr>
+<tr>
+<td align="center">$a$</td>
+<td align="center">${a}$</td>
+<td align="center"><img alt="" src="" /></td>
+</tr>
+</tbody>
+</table>
+<h2 id="nondeterminate-finite-automata-to-regular-expressions">Nondeterminate Finite Automata to Regular Expressions<a class="headerlink" href="#nondeterminate-finite-automata-to-regular-expressions" title="Permanent link">&para;</a></h2>
+<p>Given any nondeterminate finite automata we can construct an eqivalent nondeterminate finite automata with</p>
+<ol>
+<li>exactly one accept state,</li>
+<li>no arrows to the start state,</li>
+<li>no arrows out of the accept state, and</li>
+<li>the accept state is not the start state.</li>
+</ol>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>$L(R) = L(M)$&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
           <aside class="copyright" role="note">
             
             Documentation built with
