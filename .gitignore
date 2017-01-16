@@ -7,7 +7,7 @@ site/
 
 # Theme Directory and stuff
 NotesTheme*
-theme/
+theme*
 
 # Binary Files
 *.pdf
