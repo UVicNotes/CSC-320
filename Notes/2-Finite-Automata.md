@@ -1,8 +1,6 @@
 # Finite Automata
 
-**Lecture 2 - January 9, 2017**
-
-We use **finite automata** to model systems with a fixed number of states.
+We use **finite automata** to model systems with a fixed number of states. We also call these **deterministic finite automata (DFAs)**.
 
 #### Example
 

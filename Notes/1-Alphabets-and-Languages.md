@@ -1,7 +1,5 @@
 # Alphabets and Languages
 
-**Lecture 1 - January 5, 2017**
-
 ## Strings and Symbols
 
 _definitions_:
