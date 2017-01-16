@@ -5,6 +5,13 @@ site_url: http://uvicnotes.github.io/CSC-320/
 repo_url: https://github.com/UVicNotes/CSC-320
 site_description: Course Notes for CSC 320 - Foundations of Computer Science
 site_author: Brynn Hawker
+pages:
+- Home: 'index.md'
+- Notes:
+    - 'Introduction': '0-Introduction.md'
+    - 'Alphabets and Languages': '1-Alphabets-and-Languages.md'
+    - 'Finite Automata': '2-Finite-Automata.md'
+    - 'Nondeterministic Finite Automata': '3-Nondeterministic-Finite-Automata.md'
 extra_javascript:
     - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
     - https://cdn.rawgit.com/UVicNotes/UVicNotes/81099952ba789829fab1840e5d26cb5a2bf62011/helpers/mathjax.js
