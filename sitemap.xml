@@ -35,6 +35,12 @@
      <changefreq>daily</changefreq>
     </url>
         
+    <url>
+     <loc>http://uvicnotes.github.io/CSC-320//4-Regular-Expressions/</loc>
+     <lastmod>2017-01-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
 </urlset>

@@ -9,21 +9,21 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>Finite Automata - CSC 320</title>
+        <title>Regular Expressions - CSC 320</title>
       
       
         <meta name="description" content="Course Notes for CSC 320 - Foundations of Computer Science">
       
       
-        <link rel="canonical" href="http://uvicnotes.github.io/CSC-320/2-Finite-Automata/">
+        <link rel="canonical" href="http://uvicnotes.github.io/CSC-320/4-Regular-Expressions/">
       
       
         <meta name="author" content="Brynn Hawker">
       
     
-    <meta property="og:url" content="http://uvicnotes.github.io/CSC-320/2-Finite-Automata/">
+    <meta property="og:url" content="http://uvicnotes.github.io/CSC-320/4-Regular-Expressions/">
     <meta property="og:title" content="CSC 320">
-    <meta property="og:image" content="http://uvicnotes.github.io/CSC-320/2-Finite-Automata//../">
+    <meta property="og:image" content="http://uvicnotes.github.io/CSC-320/4-Regular-Expressions//../">
     <meta name="apple-mobile-web-app-title" content="CSC 320">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -85,7 +85,7 @@
             
           </span>
         
-        Finite Automata
+        Regular Expressions
       </div>
     </div>
     
@@ -195,36 +195,9 @@
       
         
   <li>
-    <a class="current" title="Finite Automata" href="./">
+    <a class="" title="Finite Automata" href="../2-Finite-Automata/">
       Finite Automata
     </a>
-    
-      
-        
-      
-      
-        <ul>
-          
-            <li class="anchor">
-              <a title="Example" href="#example">
-                Example
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="A Finite Automaton" href="#a-finite-automaton">
-                A Finite Automaton
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="Closure" href="#closure">
-                Closure
-              </a>
-            </li>
-          
-        </ul>
-      
     
   </li>
 
@@ -240,9 +213,24 @@
       
         
   <li>
-    <a class="" title="Regular Expressions" href="../4-Regular-Expressions/">
+    <a class="current" title="Regular Expressions" href="./">
       Regular Expressions
     </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="Formal Definition" href="#formal-definition">
+                Formal Definition
+              </a>
+            </li>
+          
+        </ul>
+      
     
   </li>
 
@@ -268,46 +256,26 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="finite-automata">Finite Automata</h1>
-<p>We use <strong>finite automata</strong> to model systems with a fixed number of states. We also call these <strong>deterministic finite automata (DFAs)</strong>.</p>
-<h4 id="example">Example</h4>
-<p>A door controller is a finite automata. Suppose it has three components:</p>
-<ul>
-<li>Front Pad</li>
-<li>Door</li>
-<li>Rear Pad.</li>
-</ul>
-<p>The door has two possible <strong>states</strong>, <code>OPEN</code> or <code>CLOSED</code>. There are four possible <strong>signals</strong> (or <strong>inputs</strong>):</p>
-<ul>
-<li><code>FRONT</code></li>
-<li><code>REAR</code></li>
-<li><code>BOTH</code></li>
-<li><code>NEITHER</code></li>
-</ul>
-<p>We can represent this with a state diagram.</p>
-<h2 id="a-finite-automaton">A Finite Automaton</h2>
-<p><em>definition</em>: A <strong>finite automaton (FA)</strong> is a structure, for a machine $M$, $M = (Q, \Sigma, \delta, q_0, F)$, where</p>
-<ul>
-<li>$Q = {q_1, q_2, \ldots}$ is a finite <strong>set of states</strong></li>
-<li>$\Sigma$ is the <strong>input symbols</strong> or alphabet</li>
-<li>$\delta$ is the <strong>transition function</strong></li>
-<li>$q_0 \in Q$ is the <strong>starting state</strong></li>
-<li>$F \subseteq Q$ is the set of <strong>accept states</strong> or <strong>final states</strong></li>
-</ul>
-<p>The language of the machine $M$ is the set $L$ of all strings $M$ accepts.</p>
-<h3 id="computation-or-acceptance">Computation or Acceptance</h3>
-<p><em>definition</em>: Given a finite automaton $M = (Q, \Sigma, \delta, q_0, F)$, a string $w$ over $\Sigma$ where $w = w_1 w_2 \ldots w_n$.</p>
-<p>Then $M$ <strong>accepts</strong> $w$ if there is a sequence of states $r_0,r_1,\ldots,r_n$ in $Q$ such that</p>
-<h4 id="example_1">Example</h4>
-<p><em>Construct a finite automaton accepting the following language:</em>
-$$
-    { x \in {a,b}^* | \text{ $x$ contains a substring of 3 consecutive $a$'s} }
-$$</p>
-<p><img alt="Solution" src="../img/2017-01-09--12-30-16.jpg" /></p>
-<h2 id="closure">Closure</h2>
-<p><em>definition</em>: A set is <strong>closed</strong> under an operation if the result of the operation on an element of the set is also an element of the set.</p>
-<h3 id="theorem">Theorem</h3>
-<p>If $L_1$ and $L_2$ are regular languages then so is $L_1 \cup L_2$.</p>
+          <h1 id="regular-expressions">Regular Expressions</h1>
+<p>We can use regular operations to build up <strong>regular expressions</strong> which describe languages.</p>
+<p>For example,</p>
+<p>
+<script type="math/tex; mode=display">
+  (a \cup b)a^*
+</script>
+</p>
+<p>is an $a$ or a $b$ followed by zero or more $a$'s.</p>
+<h2 id="formal-definition">Formal Definition</h2>
+<p>We say $R$ is a <strong>regular expression</strong> if $R$ is</p>
+<ol>
+<li>$a$ for some $a$ in the alphabet $\Sigma$,</li>
+<li>$\varepsilon$,</li>
+<li>$\varnothing$,</li>
+<li>$(R_1 \cup R_2)$, where $R_1$ and $R_2$ are regular expressions,</li>
+<li>$(R_1 \circ R_2)$, where $R_1$ and $R_2$ are regular expressions, or</li>
+<li>$(R)^*$, where $R$ is a regular expression.</li>
+</ol>
+<p>Note that $\varepsilon$ is a language with only one string, the empty string ($\epsilon$), and $\varnothing$ is the language with no strings.</p>
           <aside class="copyright" role="note">
             
             Documentation built with
@@ -324,7 +292,7 @@ $$</p>
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href="../1-Alphabets-and-Languages/" title="Alphabets and Languages">
+        <a href="../3-Nondeterministic-Finite-Automata/" title="Nondeterministic Finite Automata">
           <span class="direction">
             Previous
           </span>
@@ -334,7 +302,7 @@ $$</p>
             </div>
             <div class="stretch">
               <div class="title">
-                Alphabets and Languages
+                Nondeterministic Finite Automata
               </div>
             </div>
           </div>
@@ -342,22 +310,6 @@ $$</p>
       
     </div>
     <div class="next">
-      
-        <a href="../3-Nondeterministic-Finite-Automata/" title="Nondeterministic Finite Automata">
-          <span class="direction">
-            Next
-          </span>
-          <div class="page">
-            <div class="stretch">
-              <div class="title">
-                Nondeterministic Finite Automata
-              </div>
-            </div>
-            <div class="button button-next" role="button" aria-label="Next">
-              <i class="icon icon-arrow-right"></i>
-            </div>
-          </div>
-        </a>
       
     </div>
   </nav>
