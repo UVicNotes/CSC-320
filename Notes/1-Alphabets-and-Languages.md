@@ -34,8 +34,6 @@ Give a string $w$, the **reversal** of $w$ is denoted $w^R$.
 
 ## Languages
 
-**Lecture 2 - January 9, 2017**
-
 _definition_: A **language** is a set of strings over an alphabet. We can apply set opertations like,
 
 * Union

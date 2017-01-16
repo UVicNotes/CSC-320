@@ -12,6 +12,7 @@ pages:
     - 'Alphabets and Languages': '1-Alphabets-and-Languages.md'
     - 'Finite Automata': '2-Finite-Automata.md'
     - 'Nondeterministic Finite Automata': '3-Nondeterministic-Finite-Automata.md'
+    - 'Regular Expressions': '4-Regular-Expressions.md'
 extra_javascript:
     - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
     - https://cdn.rawgit.com/UVicNotes/UVicNotes/81099952ba789829fab1840e5d26cb5a2bf62011/helpers/mathjax.js
