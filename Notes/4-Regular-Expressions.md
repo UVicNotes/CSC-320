@@ -22,3 +22,21 @@ We say $R$ is a **regular expression** if $R$ is
 6. $(R)^*$, where $R$ is a regular expression.
 
 Note that $\varepsilon$ is a language with only one string, the empty string ($\epsilon$), and $\varnothing$ is the language with no strings.
+
+## Regular Expressions and Languages
+
+### Theorem
+
+A language is regular if and only if some regular expression describes it.
+
+#### Proof
+
+**Base**: 
+
+$R$ | $L(R)$ | $M$[^1]
+:-:|:-:|:-:
+$\varnothing$ | $\varnothing$ | ![]()
+$\varepsilon$ | $\{\varepsilon\}$ | ![]()
+$a$ | $\{a\}$ | ![]()
+
+[^1]: $L(R) = L(M)$
