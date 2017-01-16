@@ -33,7 +33,7 @@
         {
             "location": "/0-Introduction/", 
             "text": "Introduction\n\n\nLecture 1 - January 5, 2017\n\n\nWhat \nproblems\n are \nsolvable\n by a \ncomputer\n?\n\n\nTo answer this question we need to define these terms.\n\n\nWe will examine three computational models,\n\n\n\n\nComplexity Theory\n\n\nComputability Theory\n\n\nAutomata Theory", 
-            "title": "0 Introduction"
+            "title": "Introduction"
         }, 
         {
             "location": "/0-Introduction/#introduction", 
@@ -42,12 +42,12 @@
         }, 
         {
             "location": "/1-Alphabets-and-Languages/", 
-            "text": "Alphabets and Languages\n\n\nLecture 1 - January 5, 2017\n\n\nStrings and Symbols\n\n\ndefinitions\n:\n\n\n\n\nAn \nalphabet\n is a finite set of set of symbols, we denote an arbitrary alphabet $\\Sigma$.\n\n\nA \nstring\n is a finite sequence of symbols from the alphabet.\n\n\nThe \nempty string\n is the string with no symbols denoted $\\epsilon$.\n\n\n\n\nOperations and Relations on Strings\n\n\nConcatenation\n\n\nGiven two strings $x$ and $y$ the \nconcatenation\n of $x$ and $y$ denoted $xy$ is the the two string combined end-to-end.\n\n\nConcatenation is associative, so $xyz = (xy)z = x(yz)$.\n\n\nWe let $x^n$ be $x$ concatenated with itself $n$ times.\n\n\nSubstrings\n\n\nA string $v$ is a \nsubstring\n of $w$ if and only if there exist strings $x$ and $y$ such that\n\n\n\n\n\n    W = xvy,\n\n\n\n\n\nIf $x = \\epsilon$ then $v$ is a \nprefix\n of $w$, if $y = \\epsilon$ then $v$ is a \nsuffix\n of $w$.\n\n\nReversal\n\n\nGive a string $w$, the \nreversal\n of $w$ is denoted $w^R$.\n\n\nLanguages\n\n\nLecture 2 - January 9, 2017\n\n\ndefinition\n: A \nlanguage\n is a set of strings over an alphabet. We can apply set opertations like,\n\n\n\n\nUnion\n\n\nIntersection\n\n\nSet Difference.\n\n\n\n\nGiven a language $A$, the \ncomplement\n of $A$, denoted $\\bar A$, is\n\n\n\n\n\n    \\bar A = \\Sigma - A.\n\n\n\n\n\nGiven languages $L_1$ and $L_2$ over $\\Sigma$, their \nconcatenation\n is,\n\n\n\n\n\\begin{aligned}\n    L = L_1 \\cdot L_2 = \\{w \\in \\Sigma^* : w = xy; x \\in L_1, y \\in L_2 \\}.\n\\end{aligned}\n\n\n\n\nSometime we denote $L_1 \\cdot L_2$ as $L_1 L_2$.\n\n\nKleene star\n\n\ndefinition\n: The \nKleene star\n of a language $L$, denoted $L^*$ is the set of all strings obtained by concatenating more or more strings from $L$, i.e.,\n\n\n\n\n\\begin{aligned}\n    L^* = \\{w \\in \\Sigma^* : w = w_1 w_2 \\ldots w_k; k \\ge 0, w_i \\in L \\}.\n\\end{aligned}\n\n\n\n\nFor example, the star of $\\Sigma$ is $\\Sigma^*$, the star of $\\varnothing$ is ${\\epsilon}$.\n\n\nProblems\n\n\nDecision vs Search\n\n\n\n\nDecision\n: Given a formula $\\varphi(x_1,x_2,\\ldots)$ is there a setting of variables such that $\\varphi = T$.\n\n\nSearch\n: Given $\\varphi$, return a satisfying assignment if one exists.\n\n\n\n\nSome examples,\n\n\n\n\nIs a graph 3-colourable?\n is a \ndecision\n problem.\n\n\nWhat is a  3-colouring of this graph?\n is a \nsearch\n problem.", 
-            "title": "1 Alphabets and Languages"
+            "text": "Alphabets and Languages\n\n\nStrings and Symbols\n\n\ndefinitions\n:\n\n\n\n\nAn \nalphabet\n is a finite set of set of symbols, we denote an arbitrary alphabet $\\Sigma$.\n\n\nA \nstring\n is a finite sequence of symbols from the alphabet.\n\n\nThe \nempty string\n is the string with no symbols denoted $\\epsilon$.\n\n\n\n\nOperations and Relations on Strings\n\n\nConcatenation\n\n\nGiven two strings $x$ and $y$ the \nconcatenation\n of $x$ and $y$ denoted $xy$ is the the two string combined end-to-end.\n\n\nConcatenation is associative, so $xyz = (xy)z = x(yz)$.\n\n\nWe let $x^n$ be $x$ concatenated with itself $n$ times.\n\n\nSubstrings\n\n\nA string $v$ is a \nsubstring\n of $w$ if and only if there exist strings $x$ and $y$ such that\n\n\n\n\n\n    W = xvy,\n\n\n\n\n\nIf $x = \\epsilon$ then $v$ is a \nprefix\n of $w$, if $y = \\epsilon$ then $v$ is a \nsuffix\n of $w$.\n\n\nReversal\n\n\nGive a string $w$, the \nreversal\n of $w$ is denoted $w^R$.\n\n\nLanguages\n\n\nLecture 2 - January 9, 2017\n\n\ndefinition\n: A \nlanguage\n is a set of strings over an alphabet. We can apply set opertations like,\n\n\n\n\nUnion\n\n\nIntersection\n\n\nSet Difference.\n\n\n\n\nGiven a language $A$, the \ncomplement\n of $A$, denoted $\\bar A$, is\n\n\n\n\n\n    \\bar A = \\Sigma - A.\n\n\n\n\n\nGiven languages $L_1$ and $L_2$ over $\\Sigma$, their \nconcatenation\n is,\n\n\n\n\n\\begin{aligned}\n    L = L_1 \\cdot L_2 = \\{w \\in \\Sigma^* : w = xy; x \\in L_1, y \\in L_2 \\}.\n\\end{aligned}\n\n\n\n\nSometime we denote $L_1 \\cdot L_2$ as $L_1 L_2$.\n\n\nKleene star\n\n\ndefinition\n: The \nKleene star\n of a language $L$, denoted $L^*$ is the set of all strings obtained by concatenating more or more strings from $L$, i.e.,\n\n\n\n\n\\begin{aligned}\n    L^* = \\{w \\in \\Sigma^* : w = w_1 w_2 \\ldots w_k; k \\ge 0, w_i \\in L \\}.\n\\end{aligned}\n\n\n\n\nFor example, the star of $\\Sigma$ is $\\Sigma^*$, the star of $\\varnothing$ is ${\\epsilon}$.\n\n\nProblems\n\n\nDecision vs Search\n\n\n\n\nDecision\n: Given a formula $\\varphi(x_1,x_2,\\ldots)$ is there a setting of variables such that $\\varphi = T$.\n\n\nSearch\n: Given $\\varphi$, return a satisfying assignment if one exists.\n\n\n\n\nSome examples,\n\n\n\n\nIs a graph 3-colourable?\n is a \ndecision\n problem.\n\n\nWhat is a  3-colouring of this graph?\n is a \nsearch\n problem.", 
+            "title": "Alphabets and Languages"
         }, 
         {
             "location": "/1-Alphabets-and-Languages/#alphabets-and-languages", 
-            "text": "Lecture 1 - January 5, 2017", 
+            "text": "", 
             "title": "Alphabets and Languages"
         }, 
         {
@@ -97,12 +97,12 @@
         }, 
         {
             "location": "/2-Finite-Automata/", 
-            "text": "Finite Automata\n\n\nLecture 2 - January 9, 2017\n\n\nWe use \nfinite automata\n to model systems with a fixed number of states.\n\n\nExample\n\n\nA door controller is a finite automata. Suppose it has three components:\n\n\n\n\nFront Pad\n\n\nDoor\n\n\nRear Pad.\n\n\n\n\nThe door has two possible \nstates\n, \nOPEN\n or \nCLOSED\n. There are four possible \nsignals\n (or \ninputs\n):\n\n\n\n\nFRONT\n\n\nREAR\n\n\nBOTH\n\n\nNEITHER\n\n\n\n\nWe can represent this with a state diagram.\n\n\nA Finite Automaton\n\n\ndefinition\n: A \nfinite automaton (FA)\n is a structure, for a machine $M$, $M = (Q, \\Sigma, \\delta, q_0, F)$, where\n\n\n\n\n$Q = {q_1, q_2, \\ldots}$ is a finite \nset of states\n\n\n$\\Sigma$ is the \ninput symbols\n or alphabet\n\n\n$\\delta$ is the \ntransition function\n\n\n$q_0 \\in Q$ is the \nstarting state\n\n\n$F \\subseteq Q$ is the set of \naccept states\n or \nfinal states\n\n\n\n\nThe language of the machine $M$ is the set $L$ of all strings $M$ accepts.\n\n\nComputation or Acceptance\n\n\ndefinition\n: Given a finite automaton $M = (Q, \\Sigma, \\delta, q_0, F)$, a string $w$ over $\\Sigma$ where $w = w_1 w_2 \\ldots w_n$.\n\n\nThen $M$ \naccepts\n $w$ if there is a sequence of states $r_0,r_1,\\ldots,r_n$ in $Q$ such that\n\n\nExample\n\n\nConstruct a finite automaton accepting the following language:\n\n\n$$\n\\begin{aligned}\n    \\{ x \\in \\{a,b\\}^* | \\text{ $x$ contains a substring of 3 consecutive $a$'s} \\}\n\\end{aligned}\n$$\n\n\n\n\nClosure\n\n\ndefinition\n: A set is \nclosed\n under an operation if the result of the operation on an element of the set is also an element of the set.\n\n\nTheorem\n\n\nIf $L_1$ and $L_2$ are regular languages then so is $L_1 \\cup L_2$.", 
-            "title": "2 Finite Automata"
+            "text": "Finite Automata\n\n\nWe use \nfinite automata\n to model systems with a fixed number of states. We also call these \ndeterministic finite automata (DFAs)\n.\n\n\nExample\n\n\nA door controller is a finite automata. Suppose it has three components:\n\n\n\n\nFront Pad\n\n\nDoor\n\n\nRear Pad.\n\n\n\n\nThe door has two possible \nstates\n, \nOPEN\n or \nCLOSED\n. There are four possible \nsignals\n (or \ninputs\n):\n\n\n\n\nFRONT\n\n\nREAR\n\n\nBOTH\n\n\nNEITHER\n\n\n\n\nWe can represent this with a state diagram.\n\n\nA Finite Automaton\n\n\ndefinition\n: A \nfinite automaton (FA)\n is a structure, for a machine $M$, $M = (Q, \\Sigma, \\delta, q_0, F)$, where\n\n\n\n\n$Q = {q_1, q_2, \\ldots}$ is a finite \nset of states\n\n\n$\\Sigma$ is the \ninput symbols\n or alphabet\n\n\n$\\delta$ is the \ntransition function\n\n\n$q_0 \\in Q$ is the \nstarting state\n\n\n$F \\subseteq Q$ is the set of \naccept states\n or \nfinal states\n\n\n\n\nThe language of the machine $M$ is the set $L$ of all strings $M$ accepts.\n\n\nComputation or Acceptance\n\n\ndefinition\n: Given a finite automaton $M = (Q, \\Sigma, \\delta, q_0, F)$, a string $w$ over $\\Sigma$ where $w = w_1 w_2 \\ldots w_n$.\n\n\nThen $M$ \naccepts\n $w$ if there is a sequence of states $r_0,r_1,\\ldots,r_n$ in $Q$ such that\n\n\nExample\n\n\nConstruct a finite automaton accepting the following language:\n\n$$\n    { x \\in {a,b}^* | \\text{ $x$ contains a substring of 3 consecutive $a$'s} }\n$$\n\n\n\n\nClosure\n\n\ndefinition\n: A set is \nclosed\n under an operation if the result of the operation on an element of the set is also an element of the set.\n\n\nTheorem\n\n\nIf $L_1$ and $L_2$ are regular languages then so is $L_1 \\cup L_2$.", 
+            "title": "Finite Automata"
         }, 
         {
             "location": "/2-Finite-Automata/#finite-automata", 
-            "text": "Lecture 2 - January 9, 2017  We use  finite automata  to model systems with a fixed number of states.", 
+            "text": "We use  finite automata  to model systems with a fixed number of states. We also call these  deterministic finite automata (DFAs) .", 
             "title": "Finite Automata"
         }, 
         {
@@ -122,7 +122,7 @@
         }, 
         {
             "location": "/2-Finite-Automata/#example_1", 
-            "text": "Construct a finite automaton accepting the following language:  $$ \\begin{aligned}\n    \\{ x \\in \\{a,b\\}^* | \\text{ $x$ contains a substring of 3 consecutive $a$'s} \\}\n\\end{aligned} $$", 
+            "text": "Construct a finite automaton accepting the following language: \n$$\n    { x \\in {a,b}^* | \\text{ $x$ contains a substring of 3 consecutive $a$'s} }\n$$", 
             "title": "Example"
         }, 
         {
@@ -137,12 +137,12 @@
         }, 
         {
             "location": "/3-Nondeterministic-Finite-Automata/", 
-            "text": "Nondeterministic Finite Automata\n\n\nLecture 3 - January 12, 2017\n\n\nOops.", 
-            "title": "3 Nondeterministic Finite Automata"
+            "text": "Nondeterministic Finite Automata\n\n\nWe use \nnondeterministic finite automata (NFAs)\n to model systems with a variable number of states.", 
+            "title": "Nondeterministic Finite Automata"
         }, 
         {
             "location": "/3-Nondeterministic-Finite-Automata/#nondeterministic-finite-automata", 
-            "text": "Lecture 3 - January 12, 2017  Oops.", 
+            "text": "We use  nondeterministic finite automata (NFAs)  to model systems with a variable number of states.", 
             "title": "Nondeterministic Finite Automata"
         }
     ]

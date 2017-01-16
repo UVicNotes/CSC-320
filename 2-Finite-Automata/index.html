@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>2 Finite Automata - CSC 320</title>
+        <title>Finite Automata - CSC 320</title>
       
       
         <meta name="description" content="Course Notes for CSC 320 - Foundations of Computer Science">
@@ -79,9 +79,13 @@
         
           <span class="path">
             
+              
+                Notes <i class="icon icon-chevron-right"></i>
+              
+            
           </span>
         
-        2 Finite Automata
+        Finite Automata
       </div>
     </div>
     
@@ -168,26 +172,31 @@
           
             
   <li>
-    <a class="" title="0 Introduction" href="../0-Introduction/">
-      0 Introduction
+    <span class="section">Notes</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Introduction" href="../0-Introduction/">
+      Introduction
     </a>
     
   </li>
 
-          
-            
+      
+        
   <li>
-    <a class="" title="1 Alphabets and Languages" href="../1-Alphabets-and-Languages/">
-      1 Alphabets and Languages
+    <a class="" title="Alphabets and Languages" href="../1-Alphabets-and-Languages/">
+      Alphabets and Languages
     </a>
     
   </li>
 
-          
-            
+      
+        
   <li>
-    <a class="current" title="2 Finite Automata" href="./">
-      2 Finite Automata
+    <a class="current" title="Finite Automata" href="./">
+      Finite Automata
     </a>
     
       
@@ -219,13 +228,17 @@
     
   </li>
 
-          
-            
+      
+        
   <li>
-    <a class="" title="3 Nondeterministic Finite Automata" href="../3-Nondeterministic-Finite-Automata/">
-      3 Nondeterministic Finite Automata
+    <a class="" title="Nondeterministic Finite Automata" href="../3-Nondeterministic-Finite-Automata/">
+      Nondeterministic Finite Automata
     </a>
     
+  </li>
+
+      
+    </ul>
   </li>
 
           
@@ -247,8 +260,7 @@
         <div class="wrapper">
           
           <h1 id="finite-automata">Finite Automata</h1>
-<p><strong>Lecture 2 - January 9, 2017</strong></p>
-<p>We use <strong>finite automata</strong> to model systems with a fixed number of states.</p>
+<p>We use <strong>finite automata</strong> to model systems with a fixed number of states. We also call these <strong>deterministic finite automata (DFAs)</strong>.</p>
 <h4 id="example">Example</h4>
 <p>A door controller is a finite automata. Suppose it has three components:</p>
 <ul>
@@ -278,10 +290,10 @@
 <p><em>definition</em>: Given a finite automaton $M = (Q, \Sigma, \delta, q_0, F)$, a string $w$ over $\Sigma$ where $w = w_1 w_2 \ldots w_n$.</p>
 <p>Then $M$ <strong>accepts</strong> $w$ if there is a sequence of states $r_0,r_1,\ldots,r_n$ in $Q$ such that</p>
 <h4 id="example_1">Example</h4>
-<p><em>Construct a finite automaton accepting the following language:</em></p>
-<p>$$<script type="math/tex; mode=display">\begin{aligned}
-    \{ x \in \{a,b\}^* | \text{ $x$ contains a substring of 3 consecutive $a$'s} \}
-\end{aligned}</script>$$</p>
+<p><em>Construct a finite automaton accepting the following language:</em>
+$$
+    { x \in {a,b}^* | \text{ $x$ contains a substring of 3 consecutive $a$'s} }
+$$</p>
 <p><img alt="Solution" src="../img/2017-01-09--12-30-16.jpg" /></p>
 <h2 id="closure">Closure</h2>
 <p><em>definition</em>: A set is <strong>closed</strong> under an operation if the result of the operation on an element of the set is also an element of the set.</p>
@@ -303,7 +315,7 @@
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href="../1-Alphabets-and-Languages/" title="1 Alphabets and Languages">
+        <a href="../1-Alphabets-and-Languages/" title="Alphabets and Languages">
           <span class="direction">
             Previous
           </span>
@@ -313,7 +325,7 @@
             </div>
             <div class="stretch">
               <div class="title">
-                1 Alphabets and Languages
+                Alphabets and Languages
               </div>
             </div>
           </div>
@@ -322,14 +334,14 @@
     </div>
     <div class="next">
       
-        <a href="../3-Nondeterministic-Finite-Automata/" title="3 Nondeterministic Finite Automata">
+        <a href="../3-Nondeterministic-Finite-Automata/" title="Nondeterministic Finite Automata">
           <span class="direction">
             Next
           </span>
           <div class="page">
             <div class="stretch">
               <div class="title">
-                3 Nondeterministic Finite Automata
+                Nondeterministic Finite Automata
               </div>
             </div>
             <div class="button button-next" role="button" aria-label="Next">
