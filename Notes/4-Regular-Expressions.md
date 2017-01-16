@@ -40,3 +40,13 @@ $\varepsilon$ | $\{\varepsilon\}$ | ![]()
 $a$ | $\{a\}$ | ![]()
 
 [^1]: $L(R) = L(M)$
+
+## Nondeterminate Finite Automata to Regular Expressions
+
+
+Given any nondeterminate finite automata we can construct an eqivalent nondeterminate finite automata with
+
+1. exactly one accept state,
+2. no arrows to the start state,
+3. no arrows out of the accept state, and
+4. the accept state is not the start state.
