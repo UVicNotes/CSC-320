@@ -134,6 +134,16 @@
             "location": "/2-Finite-Automata/#theorem", 
             "text": "If $L_1$ and $L_2$ are regular languages then so is $L_1 \\cup L_2$.", 
             "title": "Theorem"
+        }, 
+        {
+            "location": "/3-Nondeterministic-Finite-Automata/", 
+            "text": "Nondeterministic Finite Automata\n\n\nLecture 3 - January 12, 2017\n\n\nOops.", 
+            "title": "3 Nondeterministic Finite Automata"
+        }, 
+        {
+            "location": "/3-Nondeterministic-Finite-Automata/#nondeterministic-finite-automata", 
+            "text": "Lecture 3 - January 12, 2017  Oops.", 
+            "title": "Nondeterministic Finite Automata"
         }
     ]
 }
