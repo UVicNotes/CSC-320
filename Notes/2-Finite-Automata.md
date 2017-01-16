@@ -42,10 +42,9 @@ Then $M$ **accepts** $w$ if there is a sequence of states $r_0,r_1,\ldots,r_n$ i
 #### Example
 
 *Construct a finite automaton accepting the following language:*
-
-$$\begin{aligned}
+$$
     \{ x \in \{a,b\}^* | \text{ $x$ contains a substring of 3 consecutive $a$'s} \}
-\end{aligned}$$
+$$
 
 ![Solution](img/2017-01-09--12-30-16.jpg)
 
