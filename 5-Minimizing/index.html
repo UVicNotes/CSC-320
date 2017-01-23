@@ -9,21 +9,21 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>Regular Expressions - CSC 320</title>
+        <title>Minimization - CSC 320</title>
       
       
         <meta name="description" content="Course Notes for CSC 320 - Foundations of Computer Science">
       
       
-        <link rel="canonical" href="http://uvicnotes.github.io/CSC-320/4-Regular-Expressions/">
+        <link rel="canonical" href="http://uvicnotes.github.io/CSC-320/5-Minimizing/">
       
       
         <meta name="author" content="Brynn Hawker">
       
     
-    <meta property="og:url" content="http://uvicnotes.github.io/CSC-320/4-Regular-Expressions/">
+    <meta property="og:url" content="http://uvicnotes.github.io/CSC-320/5-Minimizing/">
     <meta property="og:title" content="CSC 320">
-    <meta property="og:image" content="http://uvicnotes.github.io/CSC-320/4-Regular-Expressions//../">
+    <meta property="og:image" content="http://uvicnotes.github.io/CSC-320/5-Minimizing//../">
     <meta name="apple-mobile-web-app-title" content="CSC 320">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -85,7 +85,7 @@
             
           </span>
         
-        Regular Expressions
+        Minimization
       </div>
     </div>
     
@@ -213,8 +213,17 @@
       
         
   <li>
-    <a class="current" title="Regular Expressions" href="./">
+    <a class="" title="Regular Expressions" href="../4-Regular-Expressions/">
       Regular Expressions
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="current" title="Minimization" href="./">
+      Minimization
     </a>
     
       
@@ -224,34 +233,13 @@
         <ul>
           
             <li class="anchor">
-              <a title="Formal Definition" href="#formal-definition">
-                Formal Definition
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="Regular Expressions and Languages" href="#regular-expressions-and-languages">
-                Regular Expressions and Languages
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="Nondeterminate Finite Automata to Regular Expressions" href="#nondeterminate-finite-automata-to-regular-expressions">
-                Nondeterminate Finite Automata to Regular Expressions
+              <a title="Process" href="#process">
+                Process
               </a>
             </li>
           
         </ul>
       
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="Minimization" href="../5-Minimizing/">
-      Minimization
-    </a>
     
   </li>
 
@@ -277,73 +265,12 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="regular-expressions">Regular Expressions<a class="headerlink" href="#regular-expressions" title="Permanent link">&para;</a></h1>
-<p>We can use regular operations to build up <strong>regular expressions</strong> which describe languages.</p>
-<p>For example,</p>
-<p>
-<script type="math/tex; mode=display">
-  (a \cup b)a^*
-</script>
-</p>
-<p>is an $a$ or a $b$ followed by zero or more $a$&rsquo;s.</p>
-<h2 id="formal-definition">Formal Definition<a class="headerlink" href="#formal-definition" title="Permanent link">&para;</a></h2>
-<p>We say $R$ is a <strong>regular expression</strong> if $R$ is</p>
-<ol>
-<li>$a$ for some $a$ in the alphabet $\Sigma$,</li>
-<li>$\varepsilon$,</li>
-<li>$\varnothing$,</li>
-<li>$(R_1 \cup R_2)$, where $R_1$ and $R_2$ are regular expressions,</li>
-<li>$(R_1 \circ R_2)$, where $R_1$ and $R_2$ are regular expressions, or</li>
-<li>$(R)^*$, where $R$ is a regular expression.</li>
-</ol>
-<p>Note that $\varepsilon$ is a language with only one string, the empty string ($\epsilon$), and $\varnothing$ is the language with no strings.</p>
-<h2 id="regular-expressions-and-languages">Regular Expressions and Languages<a class="headerlink" href="#regular-expressions-and-languages" title="Permanent link">&para;</a></h2>
-<h3 id="theorem">Theorem<a class="headerlink" href="#theorem" title="Permanent link">&para;</a></h3>
-<p>A language is regular if and only if some regular expression describes it.</p>
-<h4 id="proof">Proof<a class="headerlink" href="#proof" title="Permanent link">&para;</a></h4>
-<p><strong>Base</strong>: </p>
-<table>
-<thead>
-<tr>
-<th align="center">$R$</th>
-<th align="center">$L(R)$</th>
-<th align="center">$M$<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">$\varnothing$</td>
-<td align="center">$\varnothing$</td>
-<td align="center"><img alt="" src="" /></td>
-</tr>
-<tr>
-<td align="center">$\varepsilon$</td>
-<td align="center">${\varepsilon}$</td>
-<td align="center"><img alt="" src="" /></td>
-</tr>
-<tr>
-<td align="center">$a$</td>
-<td align="center">${a}$</td>
-<td align="center"><img alt="" src="" /></td>
-</tr>
-</tbody>
-</table>
-<h2 id="nondeterminate-finite-automata-to-regular-expressions">Nondeterminate Finite Automata to Regular Expressions<a class="headerlink" href="#nondeterminate-finite-automata-to-regular-expressions" title="Permanent link">&para;</a></h2>
-<p>Given any nondeterminate finite automata we can construct an eqivalent nondeterminate finite automata with</p>
-<ol>
-<li>exactly one accept state,</li>
-<li>no arrows to the start state,</li>
-<li>no arrows out of the accept state, and</li>
-<li>the accept state is not the start state.</li>
-</ol>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:1">
-<p>$L(R) = L(M)$&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div>
+          <h1 id="minimizing-discreet-finite-automata">Minimizing Discreet Finite Automata<a class="headerlink" href="#minimizing-discreet-finite-automata" title="Permanent link">&para;</a></h1>
+<p>Given a discreet finite automaton, $M = (Q, \Sigma, \delta, q_0, F)$, for a language $L$, we canstruct a <strong>minimal</strong> discreet finite automaton with as few states as possible. This discreet finite automaton is isomorphically unique.</p>
+<h2 id="process">Process<a class="headerlink" href="#process" title="Permanent link">&para;</a></h2>
+<p>Given $M = (Q, \Sigma, \delta, q_0, F)$, and $q \in Q$, let $M_q$ be identical to $M$, but with state $q$ instead of $q_0$.</p>
+<p>Then $p$ and $q$ can be collapse if $L(M_p) = L(M_q)$.</p>
+<p>Consider $M$ with $p$ and $q$ collapsed to $pq$, let&rsquo;s call this $M^\prime$.</p>
           <aside class="copyright" role="note">
             
             Documentation built with
@@ -360,7 +287,7 @@
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href="../3-Nondeterministic-Finite-Automata/" title="Nondeterministic Finite Automata">
+        <a href="../4-Regular-Expressions/" title="Regular Expressions">
           <span class="direction">
             Previous
           </span>
@@ -370,7 +297,7 @@
             </div>
             <div class="stretch">
               <div class="title">
-                Nondeterministic Finite Automata
+                Regular Expressions
               </div>
             </div>
           </div>
@@ -378,22 +305,6 @@
       
     </div>
     <div class="next">
-      
-        <a href="../5-Minimizing/" title="Minimization">
-          <span class="direction">
-            Next
-          </span>
-          <div class="page">
-            <div class="stretch">
-              <div class="title">
-                Minimization
-              </div>
-            </div>
-            <div class="button button-next" role="button" aria-label="Next">
-              <i class="icon icon-arrow-right"></i>
-            </div>
-          </div>
-        </a>
       
     </div>
   </nav>

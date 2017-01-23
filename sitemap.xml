@@ -4,7 +4,7 @@
     
     <url>
      <loc>http://uvicnotes.github.io/CSC-320//</loc>
-     <lastmod>2017-01-16</lastmod>
+     <lastmod>2017-01-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,31 +13,37 @@
         
     <url>
      <loc>http://uvicnotes.github.io/CSC-320//0-Introduction/</loc>
-     <lastmod>2017-01-16</lastmod>
+     <lastmod>2017-01-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://uvicnotes.github.io/CSC-320//1-Alphabets-and-Languages/</loc>
-     <lastmod>2017-01-16</lastmod>
+     <lastmod>2017-01-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://uvicnotes.github.io/CSC-320//2-Finite-Automata/</loc>
-     <lastmod>2017-01-16</lastmod>
+     <lastmod>2017-01-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://uvicnotes.github.io/CSC-320//3-Nondeterministic-Finite-Automata/</loc>
-     <lastmod>2017-01-16</lastmod>
+     <lastmod>2017-01-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://uvicnotes.github.io/CSC-320//4-Regular-Expressions/</loc>
-     <lastmod>2017-01-16</lastmod>
+     <lastmod>2017-01-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://uvicnotes.github.io/CSC-320//5-Minimizing/</loc>
+     <lastmod>2017-01-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

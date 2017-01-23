@@ -179,6 +179,21 @@
             "location": "/4-Regular-Expressions/#nondeterminate-finite-automata-to-regular-expressions", 
             "text": "Given any nondeterminate finite automata we can construct an eqivalent nondeterminate finite automata with   exactly one accept state,  no arrows to the start state,  no arrows out of the accept state, and  the accept state is not the start state.       $L(R) = L(M)$", 
             "title": "Nondeterminate Finite Automata to Regular Expressions"
+        }, 
+        {
+            "location": "/5-Minimizing/", 
+            "text": "Minimizing Discreet Finite Automata\n\n\nGiven a discreet finite automaton, $M = (Q, \\Sigma, \\delta, q_0, F)$, for a language $L$, we canstruct a \nminimal\n discreet finite automaton with as few states as possible. This discreet finite automaton is isomorphically unique.\n\n\nProcess\n\n\nGiven $M = (Q, \\Sigma, \\delta, q_0, F)$, and $q \\in Q$, let $M_q$ be identical to $M$, but with state $q$ instead of $q_0$.\n\n\nThen $p$ and $q$ can be collapse if $L(M_p) = L(M_q)$.\n\n\nConsider $M$ with $p$ and $q$ collapsed to $pq$, let\ns call this $M^\\prime$.", 
+            "title": "Minimization"
+        }, 
+        {
+            "location": "/5-Minimizing/#minimizing-discreet-finite-automata", 
+            "text": "Given a discreet finite automaton, $M = (Q, \\Sigma, \\delta, q_0, F)$, for a language $L$, we canstruct a  minimal  discreet finite automaton with as few states as possible. This discreet finite automaton is isomorphically unique.", 
+            "title": "Minimizing Discreet Finite Automata"
+        }, 
+        {
+            "location": "/5-Minimizing/#process", 
+            "text": "Given $M = (Q, \\Sigma, \\delta, q_0, F)$, and $q \\in Q$, let $M_q$ be identical to $M$, but with state $q$ instead of $q_0$.  Then $p$ and $q$ can be collapse if $L(M_p) = L(M_q)$.  Consider $M$ with $p$ and $q$ collapsed to $pq$, let s call this $M^\\prime$.", 
+            "title": "Process"
         }
     ]
 }
