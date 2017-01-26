@@ -14,6 +14,7 @@ pages:
     - 'Nondeterministic Finite Automata': '3-Nondeterministic-Finite-Automata.md'
     - 'Regular Expressions': '4-Regular-Expressions.md'
     - 'Minimization': '5-Minimizing.md'
+    - 'Pumping Lemma': '6-Pumping-Lemma.md'
 extra_javascript:
     - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
     - https://cdn.rawgit.com/UVicNotes/UVicNotes/81099952ba789829fab1840e5d26cb5a2bf62011/helpers/mathjax.js
@@ -23,6 +24,8 @@ markdown_extensions:
     - codehilite(css_class=code)
     - admonition
     - smarty
+    - iconfonts:
+        base: icon
     - toc:
         permalink: True
     - footnotes
