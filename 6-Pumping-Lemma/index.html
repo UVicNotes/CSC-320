@@ -9,21 +9,21 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>Nondeterministic Finite Automata - CSC 320</title>
+        <title>Pumping Lemma - CSC 320</title>
       
       
         <meta name="description" content="Course Notes for CSC 320 - Foundations of Computer Science">
       
       
-        <link rel="canonical" href="http://uvicnotes.github.io/CSC-320/3-Nondeterministic-Finite-Automata/">
+        <link rel="canonical" href="http://uvicnotes.github.io/CSC-320/6-Pumping-Lemma/">
       
       
         <meta name="author" content="Brynn Hawker">
       
     
-    <meta property="og:url" content="http://uvicnotes.github.io/CSC-320/3-Nondeterministic-Finite-Automata/">
+    <meta property="og:url" content="http://uvicnotes.github.io/CSC-320/6-Pumping-Lemma/">
     <meta property="og:title" content="CSC 320">
-    <meta property="og:image" content="http://uvicnotes.github.io/CSC-320/3-Nondeterministic-Finite-Automata//../">
+    <meta property="og:image" content="http://uvicnotes.github.io/CSC-320/6-Pumping-Lemma//../">
     <meta name="apple-mobile-web-app-title" content="CSC 320">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -85,7 +85,7 @@
             
           </span>
         
-        Nondeterministic Finite Automata
+        Pumping Lemma
       </div>
     </div>
     
@@ -204,14 +204,9 @@
       
         
   <li>
-    <a class="current" title="Nondeterministic Finite Automata" href="./">
+    <a class="" title="Nondeterministic Finite Automata" href="../3-Nondeterministic-Finite-Automata/">
       Nondeterministic Finite Automata
     </a>
-    
-      
-        
-      
-      
     
   </li>
 
@@ -236,9 +231,14 @@
       
         
   <li>
-    <a class="" title="Pumping Lemma" href="../6-Pumping-Lemma/">
+    <a class="current" title="Pumping Lemma" href="./">
       Pumping Lemma
     </a>
+    
+      
+        
+      
+      
     
   </li>
 
@@ -264,8 +264,24 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="nondeterministic-finite-automata">Nondeterministic Finite Automata<a class="headerlink" href="#nondeterministic-finite-automata" title="Permanent link">&para;</a></h1>
-<p>We use <strong>nondeterministic finite automata (NFAs)</strong> to model systems with a variable number of states.</p>
+          <h1 id="the-pumping-lemma">The Pumping Lemma<a class="headerlink" href="#the-pumping-lemma" title="Permanent link">&para;</a></h1>
+<p>Consider</p>
+<p>
+<script type="math/tex; mode=display">
+  L = \{ a^n b^n |n \ge 0 \}
+</script>
+</p>
+<p>Intuitively: we must remember how far the center point is from the start to accept the string. But finite automata have only finite memory, and the center can be arbitrarily far from the start.</p>
+<p><strong>Proof $L$ is non-regular</strong></p>
+<p>Suppose to the contrary that $L$ is regular. Then there exists a discrete finite automaton $M$ such that $L = L(M)$. Let $s$ denote the number of states in $M$.</p>
+<p>Given $a^n b^n$ for $n &gt; s$, by the pigeon hole principal (<a href="https://en.wikipedia.org/wiki/Pigeonhole_principle"><i aria-hidden="true" class="icon icon-wikipedia"></i></a>), $M$ must be in some state more than once, say state $p$.</p>
+<p>Partition $a^n b^n$ into three strings, $x_\text{before}, x, x_{after}$, divided on the two times we enter state $p$. Let $i = |x|$ be the length of the string of the middle string, $x$, between the two $p$&rsquo;s.</p>
+<p>
+<script type="math/tex; mode=display">
+  \underbrace{aaa \ldots aa}_{x_\text{before}} \underbrace{abb\ldots bb}_{x} \underbrace{b \ldots bbb}_{x_\text{after}}
+</script>
+</p>
+<p>We can skip this string $x$ or repeat it any number of times and be in the same state ($p$). Thus for any $k \ge 0$, $a^{n+(k-1)i}b^n \in L(M)!$, i.e., $a^{n-i}b^n \in L(M)$ so $a^{n-i}b^n = a^nb^n$. But $i \neq 0$, a contradiction.</p>
           <aside class="copyright" role="note">
             
             Documentation built with
@@ -282,7 +298,7 @@
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href="../2-Finite-Automata/" title="Finite Automata">
+        <a href="../5-Minimizing/" title="Minimization">
           <span class="direction">
             Previous
           </span>
@@ -292,7 +308,7 @@
             </div>
             <div class="stretch">
               <div class="title">
-                Finite Automata
+                Minimization
               </div>
             </div>
           </div>
@@ -300,22 +316,6 @@
       
     </div>
     <div class="next">
-      
-        <a href="../4-Regular-Expressions/" title="Regular Expressions">
-          <span class="direction">
-            Next
-          </span>
-          <div class="page">
-            <div class="stretch">
-              <div class="title">
-                Regular Expressions
-              </div>
-            </div>
-            <div class="button button-next" role="button" aria-label="Next">
-              <i class="icon icon-arrow-right"></i>
-            </div>
-          </div>
-        </a>
       
     </div>
   </nav>
