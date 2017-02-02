@@ -207,7 +207,7 @@
         }, 
         {
             "location": "/7-Context-Free-Languages/", 
-            "text": "Context Free Languages\n\n\nContext Free Grammars\n\n\nContext free grammars (CFGs)\n use variables to represent strings of symbols, called \nterminals\n. Each variable has a collection of rules determining the strings it can represent.", 
+            "text": "Context Free Languages\n\n\nContext Free Grammars\n\n\nContext free grammars (CFGs)\n use variables to represent strings of symbols, called \nterminals\n. Each variable has a collection of rules determining the strings it can represent.\n\n\nExample\n\n\nConsider the context free grammar, $G$, which has the following substitution rules\n\n\n\n\n\\begin{aligned}\n    A &\\to 0 A 1 \\newline\n    A &\\to B \\newline\n    B &\\to #. \\newline\n\\end{aligned}\n\n\n\n\nIf we take the start variable (the first $A$) and repeatedly substitute in the variables (in no particular scheme) then we get one of the \nderivations\n of the grammar. For Example\n\n\n\n\n\n  000#111.", 
             "title": "Context Free Languages"
         }, 
         {
@@ -217,7 +217,7 @@
         }, 
         {
             "location": "/7-Context-Free-Languages/#context-free-grammars", 
-            "text": "Context free grammars (CFGs)  use variables to represent strings of symbols, called  terminals . Each variable has a collection of rules determining the strings it can represent.", 
+            "text": "Context free grammars (CFGs)  use variables to represent strings of symbols, called  terminals . Each variable has a collection of rules determining the strings it can represent.  Example  Consider the context free grammar, $G$, which has the following substitution rules   \\begin{aligned}\n    A &\\to 0 A 1 \\newline\n    A &\\to B \\newline\n    B &\\to #. \\newline\n\\end{aligned}   If we take the start variable (the first $A$) and repeatedly substitute in the variables (in no particular scheme) then we get one of the  derivations  of the grammar. For Example   \n  000#111.", 
             "title": "Context Free Grammars"
         }
     ]
